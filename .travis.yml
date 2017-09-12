@@ -1,0 +1,6 @@
+language: c++
+compiler: gcc
+
+script:
+- g++ src/main.cpp -std=c++11 -o travis_test_with_gcc
+- ./travis_test_with_gcc
