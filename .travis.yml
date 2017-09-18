@@ -7,9 +7,8 @@ befor_install:
 install:
 - sudo apt-get install -qq cppcheck
 
-
 script:
 - g++ src/main.cpp -std=c++11 -o travis_test_with_gcc
 - ./travis_test_with_gcc
-- cppcheck --quiet --error-exitcode=1
+- cppcheck --quiet --error-exitcode=1 .
 

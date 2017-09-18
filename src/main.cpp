@@ -6,7 +6,7 @@ int main()
 	
 	// static code analyzer test
 	int a[3] = {1, 2, 3};
-	std::cout << a[1] << " " << a[4] << std::endl;
+	std::cout << a[0] << " " << a[2] << std::endl;
 	return 0;
 }
 
