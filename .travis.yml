@@ -1,6 +1,9 @@
 language: c++
 compiler: gcc
 
+notification:
+- email: false
+
 befor_install:
 - sudo apt-get update -qq
 
