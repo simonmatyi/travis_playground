@@ -1,5 +1,24 @@
 language: c++
-compiler: gcc
+
+matrix:
+  include:
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-4.9
+          env: COMPILER=g++-4.9
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-3.6
+          packages:
+            - clang-3.6
+          env: COMPILER=clang++-3.6
 
 notification:
 - email: false
@@ -13,7 +32,6 @@ install:
 script:
 - cppcheck --quiet --error-exitcode=1 .
 - mkdir build && cd build
-- cmake .. && make
+- cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
 - cd src
 - ./travis_test
-
