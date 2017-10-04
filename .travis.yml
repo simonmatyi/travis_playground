@@ -15,13 +15,30 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
+          packages:
+            - g++-6
+          env: COMPILER=g++-6
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
             - llvm-toolchain-precise-3.6
           packages:
             - clang-3.6
           env: COMPILER=clang++-3.6
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-3.7
+          packages:
+            - clang-3.7
+          env: COMPILER=clang++-3.7
 
 notification:
-- email: false
+  email: false
 
 befor_install:
 - sudo apt-get update -qq
@@ -35,3 +52,4 @@ script:
 - cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
 - cd src
 - ./travis_test
+
