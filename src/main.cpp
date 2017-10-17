@@ -1,5 +1,9 @@
 #include <iostream>
+
 #include <QDebug>
+
+#include "example.h"
+
 
 int main()
 {
@@ -10,6 +14,10 @@ int main()
 	std::cout << a[0] << " " << a[2] << std::endl;
 
 	qDebug() << "Hello world with Qt";
+	int c = example::sum(1, 3);
+
+	std::cout << c << std::endl;
+
 	return 0;
 }
 
