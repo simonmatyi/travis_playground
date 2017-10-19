@@ -49,7 +49,7 @@ install:
 script:
 - cppcheck --quiet --error-exitcode=1 .
 - mkdir build && cd build
-- cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
+- cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make -j4
 - cd src
 - ./travis_test
 
