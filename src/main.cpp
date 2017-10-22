@@ -1,12 +1,17 @@
 #include <iostream>
 
 #include <QDebug>
+#include <QMap>
 
 #include "example.h"
 
 
 int main()
 {
+	QMap<QString, QString> map;
+	map.insert(QStringLiteral("Something"), QStringLiteral("Nothing"));
+	qDebug() << map;
+
 	std::cout << "Hello world" << std::endl;
 	
 	// static code analyzer test

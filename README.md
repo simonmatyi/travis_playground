@@ -10,3 +10,4 @@ Resources:
 * https://github.com/david-grs/clang_travis_cmake_gtest_coveralls_example
 * https://arne-mertz.de/2017/04/continuous-integration-travis-ci/
 * https://github.com/richelbilderbeek/travis_cpp_tutorial
+* https://github.com/bilke/cmake-modules/blob/master/CodeCoverage.cmake
