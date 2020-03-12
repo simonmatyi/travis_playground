@@ -16,7 +16,7 @@ TEST(SumTest, testSumFunction)
 TEST(SumTest, testwerewrwe)
 {
 	int a = example::sum(1, 5);
-	EXPECT_EQ(6, a)
+	EXPECT_EQ(6, a);
 }
 
 int main(int argc, char** argv) {
