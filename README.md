@@ -1,14 +1,4 @@
 # travis_playground
-[![Build Status](https://travis-ci.org/NorbertFenk/travis_playground.svg?branch=master)](https://travis-ci.org/NorbertFenk/travis_playground)
+[![Build Status](https://travis-ci.org/simonmatyi/travis_playground.svg?branch=master)](https://travis-ci.org/simonmatyi/travis_playground)
 
-This is a playground project to gather info about Travis CI.
-
-Resources:
-* https://crascit.com/2015/07/25/cmake-gtest/
-* https://github.com/Crascit/DownloadProject
-* http://david-grs.github.io/cpp-clang-travis-cmake-gtest-coveralls-appveyor/
-* https://github.com/david-grs/clang_travis_cmake_gtest_coveralls_example
-* https://arne-mertz.de/2017/04/continuous-integration-travis-ci/
-* https://github.com/richelbilderbeek/travis_cpp_tutorial
-* https://github.com/bilke/cmake-modules/blob/master/CodeCoverage.cmake
-* https://codeflu.blog/2014/12/26/using-gcov-and-lcov-to-generate-beautiful-c-code-coverage-statistics/
+This is a fork of the [playground project](https://github.com/NorbertFenk/travis_playground) of Norbert Fenk to gather info about Travis CI.
