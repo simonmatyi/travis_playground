@@ -1,6 +1,8 @@
-language: c++
+language: cpp
+os: linux
+dist: xenial
 
-matrix:
+jobs:
   include:
     - os: linux
       addons:
@@ -9,7 +11,7 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - gcc-7
-          env: COMPILER=gcc-7.4.0
+      env: COMPILER=gcc-7.4.0
     - os: linux
       addons:
         apt:
@@ -18,12 +20,12 @@ matrix:
             - llvm-toolchain-precise-6.0
           packages:
             - clang-6.0
-          env: COMPILER=clang++-6.0
+      env: COMPILE=clang++-6.0
 
-notification:
+notifications:
   email: false
 
-befor_install:
+before_install:
 - sudo apt-get update -qq
 
 install:
@@ -39,4 +41,3 @@ script:
 - ./example_test
 - cd ..
 - make coverage
-
