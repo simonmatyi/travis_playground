@@ -19,6 +19,24 @@ TEST(SumTest, testwerewrwe)
 	EXPECT_EQ(6, a);
 }
 
+TEST(SumTest, negativeValues)
+{
+	int a = example::sum(-10, -5);
+	EXPECT_EQ(-15, a);
+}
+
+TEST(SumTest, mixedSignValues)
+{
+	int a = example::sum(77, -44);
+	EXPECT_EQ(33, a);
+}
+
+TEST(SumTest, nestedSum)
+{
+	int a = example::sum(1, example::sum(2, 4));
+	EXPECT_EQ(6, a);
+}
+
 int main(int argc, char** argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
