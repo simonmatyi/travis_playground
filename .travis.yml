@@ -11,7 +11,7 @@ jobs:
             - ubuntu-toolchain-r-test
           packages:
             - gcc-7
-      env: COMPILER=gcc-7.4.0
+      env: COMPILER=gcc-7
     - os: linux
       addons:
         apt:
@@ -20,7 +20,7 @@ jobs:
             - llvm-toolchain-precise-6.0
           packages:
             - clang-6.0
-      env: COMPILE=clang++-6.0
+      env: COMPILER=clang++-6.0
 
 notifications:
   email: false
@@ -32,6 +32,7 @@ install:
 - sudo apt-get install -qq cppcheck qt5-default qtbase5-dev lcov
 
 script:
+- $COMPILER -v
 - cppcheck --quiet --error-exitcode=1 .
 - mkdir build && cd build
 - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DCMAKE_BUILD_TYPE=Coverage .. && make -j4
