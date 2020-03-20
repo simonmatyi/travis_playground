@@ -34,7 +34,7 @@ TEST(SumTest, mixedSignValues)
 TEST(SumTest, nestedSum)
 {
 	int a = example::sum(1, example::sum(2, 4));
-	EXPECT_EQ(6, a);
+	EXPECT_EQ(7, a);
 }
 
 int main(int argc, char** argv) {
